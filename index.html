@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Registration Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+  <div class="form-header">
+    Event Registration
+  </div>
+
+  <!-- Hidden Step Controls -->
+  <input type="checkbox" id="step1" checked>
+  <input type="checkbox" id="step2">
+  <input type="checkbox" id="step3">
+
+  <!-- Steps Navigation -->
+  <div class="steps">
+    <label for="step1" class="active">1. Personal Info</label>
+    <label for="step2">2. Event Details</label>
+    <label for="step3">3. Confirmation</label>
+  </div>
+
+  <!-- Step 1: Personal Info -->
+  <div class="step-content step1">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="button-container">
+      <label class="button button-next" for="step2">Next</label>
+    </div>
+  </div>
+
+  <!-- Step 2: Event Details -->
+  <div class="step-content step2">
+    <div class="form-group">
+      <label for="event">Select Event</label>
+      <select id="event" name="event">
+        <option value="workshop">Workshop</option>
+        <option value="seminar">Seminar</option>
+        <option value="networking">Networking</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Attendance Type</label>
+      <input type="radio" id="online" name="attendance" value="online">
+      <label for="online">Online</label>
+      <input type="radio" id="in-person" name="attendance" value="in-person">
+      <label for="in-person">In-Person</label>
+    </div>
+    <div class="button-container">
+      <label class="button button-previous" for="step1">Previous</label>
+      <label class="button button-next" for="step3">Next</label>
+    </div>
+  </div>
+
+  <!-- Step 3: Confirmation -->
+  <div class="step-content step3">
+    <div class="form-group">
+      <p>Please confirm your details before submitting:</p>
+      <ul>
+        <li><strong>Name:</strong> [Your Input]</li>
+        <li><strong>Email:</strong> [Your Input]</li>
+        <li><strong>Phone:</strong> [Your Input]</li>
+        <li><strong>Event:</strong> [Your Choice]</li>
+        <li><strong>Attendance:</strong> [Your Choice]</li>
+      </ul>
+    </div>
+    <div class="button-container">
+      <label class="button button-previous" for="step2">Previous</label>
+      <button type="submit" class="button button-next">Submit</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
